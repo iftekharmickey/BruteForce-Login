@@ -2,7 +2,7 @@
 
 ## What Is a Brute Force Attack? ##
 
-A brute force attack uses trial-and-error to guess login info, encryption keys, or find a hidden web page where attackers work through all possible combinations hoping to guess correctly. These attacks are made by 'brute force,' meaning they use excessive forceful attempts to try and 'force' their way into your private account(s). Though an old attack method, it's still effective and popular with hackers. Depending on the length and complexity of the password, cracking it can take anywhere from a few seconds to many years.
+A brute force attack uses trial-and-error to guess login info, encryption keys, or find a hidden web page where attackers work through all possible combinations hoping to guess correctly. These attacks are made by 'brute force', meaning they use excessive forceful attempts to try and 'force' their way into your private account(s). Though an old attack method, it's still effective and popular with hackers. Depending on the length and complexity of the password, cracking it can take anywhere from a few seconds to many years.
 
 ## Usage ##
 
