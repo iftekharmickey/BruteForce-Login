@@ -17,7 +17,7 @@ A brute force attack uses trial-and-error to guess login info, encryption keys, 
 
 ## What is post()? ##
 
-The `post()` method sends a POST request to the specified url. The `post()` method is used when you want to send some data to the server.
+The `post()` method sends a POST request to the specified URL. The `post()` method is used when you want to send some data to the server.
 
 ## What is decode()? ##
 
