@@ -10,7 +10,7 @@ A brute force attack uses trial-and-error to guess login info, encryption keys, 
 
 - provide target URL (login page)
 - provide username of target account
-- provide password list through which bruteforce can be run
+- provide password list through which bruteforcing can be run
 - provide string that shows up when login attempt fails
 
 # FAQ #
