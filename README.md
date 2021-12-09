@@ -1,4 +1,4 @@
-# Web App Login Bruteforce #
+# Web App Login Cracker #
 
 ## What Is a Brute Force Attack? ##
 
