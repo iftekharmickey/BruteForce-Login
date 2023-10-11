@@ -1,4 +1,4 @@
-# PasswordAssault #
+# Password-Assault #
 
 This Python utility is designed to perform a brute-force attack against a web login page, attempting to find valid usernames and passwords from a provided list. It utilizes the requests library to send POST requests to the specified URL, systematically testing each password from a given password list until a successful login is achieved or all possibilities have been exhausted.
 
