@@ -1,24 +1,16 @@
-# Web App Login Cracker #
+# PasswordAssault #
 
-## What Is a Brute Force Attack? ##
+This Python utility is designed to perform a brute-force attack against a web login page, attempting to find valid usernames and passwords from a provided list. It utilizes the requests library to send POST requests to the specified URL, systematically testing each password from a given password list until a successful login is achieved or all possibilities have been exhausted.
 
-A brute force attack uses trial-and-error to guess login info, encryption keys, or find a hidden web page where attackers work through all possible combinations hoping to guess correctly. These attacks are made by 'brute force', meaning they use excessive forceful attempts to try and 'force' their way into your private account(s). Though an old attack method, it's still effective and popular with hackers. Depending on the length and complexity of the password, cracking it can take anywhere from a few seconds to many years.
+The script prompts the user for the target URL, a username to target, a password list, and a login failure string. It iteratively sends login requests with different passwords, checking for the presence of the login failure string in the response. If the login fails, the script continues with the following password in the list. When a successful login is detected, it outputs the discovered username and password.
+
+Note: Always use this script responsibly and within the boundaries of the law and ethical guidelines. Unauthorized use for malicious purposes is strictly prohibited.
 
 ## Usage ##
 
 ```python3 bruteforce.py```
 
-- provide target URL (login page)
-- provide username of target account
-- provide password list through which bruteforcing can be run
-- provide string that shows up when login attempt fails
-
-# FAQ #
-
-## What is post()? ##
-
-The `post()` method sends a POST request to the specified URL. The `post()` method is used when you want to send some data to the server.
-
-## What is decode()? ##
-
-Decoding is the process of converting code into plain text or any format that is useful for subsequent processes. Decoding is the reverse of encoding. It converts encoded data communication transmissions and files to their original states. Python string method `decode()` decodes the string using the codec registered for encoding. It defaults to the default string encoding.
+- Target URL: Provide the URL of the login page to breach
+- Username: Specify the username of the target account
+- Password List: Furnish the list of passwords for the brute-force attack
+- Login Failure Indicator: Define the string that indicates a failed login attempt
