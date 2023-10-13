@@ -6,7 +6,7 @@ This Python utility is designed to perform a basic brute-force login attack on a
 
 ### Details
 
-- The script uses the **requests** library for making HTTP requests and **termcolor** for colorful console output.
+- The script uses the `requests` library for making HTTP requests and `termcolor` for colorful console output.
 
 - It takes the following user inputs:
     - Page URL: The URL of the login page.
