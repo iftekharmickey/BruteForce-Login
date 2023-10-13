@@ -1,16 +1,41 @@
-# Password-Assault #
+# BruteForce-Login
 
-This Python utility is designed to perform a brute-force attack against a web login page, attempting to find valid usernames and passwords from a provided list. It utilizes the requests library to send POST requests to the specified URL, systematically testing each password from a given password list until a successful login is achieved or all possibilities have been exhausted.
+## Overview
 
-The script prompts the user for the target URL, a username to target, a password list, and a login failure string. It iteratively sends login requests with different passwords, checking for the presence of the login failure string in the response. If the login fails, the script continues with the following password in the list. When a successful login is detected, it outputs the discovered username and password.
+This Python utility is designed to perform a basic brute-force login attack on a website using the provided username and a list of passwords. The script sends HTTP POST requests to the login page URL and checks the response to find a successful login combination.
 
-Note: Always use this script responsibly and within the boundaries of the law and ethical guidelines. Unauthorized use for malicious purposes is strictly prohibited.
+### Details
 
-## Usage ##
+- The script uses the **requests** library for making HTTP requests and **termcolor** for colorful console output.
 
-```python3 bruteforce.py```
+- It takes the following user inputs:
+    - Page URL: The URL of the login page.
+    - Username: The target username.
+    - Password List: A text file containing a list of passwords to try.
+    - Login Failed String: The string that appears in the response when login fails.
 
-- Target URL: Provide the URL of the login page to breach
-- Username: Specify the username of the target account
-- Password List: Furnish the list of passwords for the brute-force attack
-- Login Failure Indicator: Define the string that indicates a failed login attempt
+### Usage
+
+1. Clone this repository to your local machine.
+2. Install the necessary dependencies using pip install requests termcolor.
+3. Run the script using Python.
+4. Follow the prompts and provide the required information.
+
+### Legal and Ethical Considerations
+
+- This script is provided for educational purposes only. Using it for unauthorized access to any system is illegal and unethical.
+- Ensure that you have explicit permission to test the security of the target website.
+- Always adhere to applicable laws, regulations, and ethical guidelines.
+
+### Disclaimer
+
+The author of this script is not responsible for any illegal or unethical use of the script. Use it responsibly and with permission.
+
+### Dependencies
+
+- requests: Python library for making HTTP requests.
+- termcolor: Python library for colorful console output.
+
+### Author
+
+- Iftekhar Tahir
