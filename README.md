@@ -33,8 +33,8 @@ The author of this script is not responsible for any illegal or unethical use of
 
 ### Dependencies
 
-- requests: Python library for making HTTP requests.
-- termcolor: Python library for colorful console output.
+- [requests](https://pypi.org/project/requests/): Python library for making HTTP requests.
+- [termcolor][https://pypi.org/project/termcolor/]: Python library for colorful console output.
 
 ### Author
 
