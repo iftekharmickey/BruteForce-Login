@@ -17,7 +17,7 @@ This Python utility is designed to perform a basic brute-force login attack on a
 ### Usage
 
 1. Clone this repository to your local machine.
-2. Install the necessary dependencies using pip install requests termcolor.
+2. Install the necessary dependencies using `pip install requests termcolor`.
 3. Run the script using Python.
 4. Follow the prompts and provide the required information.
 
