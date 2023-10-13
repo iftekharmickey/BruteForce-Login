@@ -38,4 +38,4 @@ The author of this script is not responsible for any illegal or unethical use of
 
 ### Author
 
-- Iftekhar Tahir
+This tool was developed by Iftekhar Tahir. If you have any questions or feedback, feel free to contact me at iftekhar.tahir@proton.me.
