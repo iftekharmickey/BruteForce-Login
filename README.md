@@ -1,4 +1,4 @@
-# Web-Automation-Login-Cracker
+# Login-Breaker-Pro
 
 ![Python Version](https://img.shields.io/badge/Python-3.6%2B-blue)
 
@@ -20,7 +20,7 @@
 
 ## Overview
 
-The Web-Automation-Login-Cracker is a Python script that automates login attempts using Selenium, a popular web automation tool. This script is intended for educational and security testing purposes, helping you test the strength of your login system or understand the importance of using strong and unique passwords.
+The Login-Breaker-Pro is a Python script that automates login attempts using Selenium, a popular web automation tool. This script is intended for educational and security testing purposes, helping you test the strength of your login system or understand the importance of using strong and unique passwords.
 
 ---
 
@@ -36,7 +36,7 @@ The Web-Automation-Login-Cracker is a Python script that automates login attempt
 
 ### Prerequisites
 
-Before you can use the Web-Automation-Login-Cracker, you need to have the following installed:
+Before you can use the Login-Breaker-Pro, you need to have the following installed:
 
 - Python 3 (Python 3.6 or higher recommended)
 - [Selenium WebDriver](https://selenium-python.readthedocs.io/installation.html#drivers) for your preferred web browser (e.g., ChromeDriver).
@@ -47,7 +47,7 @@ Before you can use the Web-Automation-Login-Cracker, you need to have the follow
 1. Clone the repository to your local machine:
 
    ```python
-   git clone https://github.com/iftekharmickey/Web-Automation-Login-Cracker.git
+   git clone https://github.com/iftekharmickey/Login-Breaker-Pro.git
 
 2. Install the required Python packages:
 
@@ -105,7 +105,7 @@ Make sure to customize these variables to match your specific testing requiremen
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/iftekharmickey/Web-Automation-Login-Cracker/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/iftekharmickey/Login-Breaker-Pro/blob/main/LICENSE) file for details.
 
 ---
 
@@ -119,4 +119,4 @@ Please use this script responsibly and only for legal and ethical purposes. Unau
 
 This tool was developed by Iftekhar Tahir.
 
-Enjoy using the Web-Automation-Login-Cracker! For questions, issues, or feedback, feel free to contact me at iftekhar.tahir@proton.me.
+Enjoy using the Login-Breaker-Pro! For questions, issues, or feedback, feel free to contact me at iftekhar.tahir@proton.me.
