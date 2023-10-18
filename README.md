@@ -1,41 +1,49 @@
-# BruteForce-Login
+# Selenium Login Cracker
+
+![Python Version](https://img.shields.io/badge/Python-3.6%2B-blue)
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
 
 ## Overview
 
-This Python utility is designed to perform a basic brute-force login attack on a website using the provided username and a list of passwords. The script sends HTTP POST requests to the login page URL and checks the response to find a successful login combination.
+The Selenium Login Cracker is a Python script that automates login attempts using Selenium, a popular web automation tool. This script is intended for educational and security testing purposes, helping you test the strength of your login system or understand the importance of using strong and unique passwords.
 
-### Details
+---
 
-- The script uses the `requests` library for making HTTP requests and `termcolor` for colorful console output.
+## Features
 
-- It takes the following user inputs:
-    - Page URL: The URL of the login page.
-    - Username: The target username.
-    - Password List: A text file containing a list of passwords to try.
-    - Login Failed String: The string that appears in the response when login fails.
+- Automated login attempts using provided username and password lists.
+- Configurable wait times and element location methods.
+- Output of successful login combinations.
 
-### Usage
+---
 
-1. Clone this repository to your local machine.
-2. Install the necessary dependencies using `pip install requests termcolor`.
-3. Run the script using Python.
-4. Follow the prompts and provide the required information.
+## Getting Started
 
-### Legal and Ethical Considerations
+### Prerequisites
 
-- This script is provided for educational purposes only. Using it for unauthorized access to any system is illegal and unethical.
-- Ensure that you have explicit permission to test the security of the target website.
-- Always adhere to applicable laws, regulations, and ethical guidelines.
+Before you can use the Selenium Login Cracker, you need to have the following installed:
 
-### Disclaimer
+- Python 3 (Python 3.6 or higher recommended)
+- Selenium WebDriver for your preferred web browser (e.g., ChromeDriver).
+- The required Python packages, which can be installed using `pip install selenium`.
 
-The author of this script is not responsible for any illegal or unethical use of the script. Use it responsibly and with permission.
+### Installation
 
-### Dependencies
+1. Clone the repository to your local machine:
 
-- [requests](https://pypi.org/project/requests/): Python library for making HTTP requests.
-- [termcolor](https://pypi.org/project/termcolor/): Python library for colorful console output.
-
-### Author
-
-This tool was developed by Iftekhar Tahir. If you have any questions or feedback, feel free to contact me at iftekhar.tahir@proton.me.
+   ```bash
+   git clone https://github.com/yourusername/Selenium-Login-Cracker.git
