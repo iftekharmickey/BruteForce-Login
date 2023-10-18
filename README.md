@@ -50,7 +50,7 @@ Before you can use the Web-Automation-Login-Cracker, you need to have the follow
 
 2. Install the required Python packages:
 
-  ```bash
+   ```bash
    pip install -r requirements.txt
 
 ---
@@ -61,7 +61,7 @@ Before you can use the Web-Automation-Login-Cracker, you need to have the follow
 2. Run the script:
 
    ```bash
-python login_bruteforce.py
+   python login_bruteforce.py
 
 3. The script will prompt you for the URL of the login page, username list, and password list.
 4. The script will automate login attempts using the provided username and password lists. If it successfully logs in, it will display the combination of the correct username and password.
