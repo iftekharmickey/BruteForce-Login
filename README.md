@@ -38,7 +38,7 @@ The Web-Automation-Login-Cracker is a Python script that automates login attempt
 Before you can use the Web-Automation-Login-Cracker, you need to have the following installed:
 
 - Python 3 (Python 3.6 or higher recommended)
-- Selenium WebDriver for your preferred web browser (e.g., ChromeDriver).
+- [Selenium WebDriver](https://selenium-python.readthedocs.io/installation.html#drivers) for your preferred web browser (e.g., ChromeDriver).
 - The required Python packages, which can be installed using `pip install selenium`.
 
 ### Installation
@@ -46,7 +46,7 @@ Before you can use the Web-Automation-Login-Cracker, you need to have the follow
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/iftekharmickey/Selenium-Login-Cracker.git
+   [git clone https://github.com/iftekharmickey/Selenium-Login-Cracker.git](https://github.com/iftekharmickey/Web-Automation-Login-Cracker.git)
 
 2. Install the required Python packages:
 
