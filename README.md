@@ -81,7 +81,7 @@ Before you can use the Web-Automation-Login-Cracker, you need to have the follow
 3. You must define the criteria for a successful login based on your website's behavior, such as the URL that indicates a successful login.
 
    ```bash
-   if '<login-url>' in driver.current_url:
+   if '<success-login-url>' in driver.current_url:
     # This line checks for a successful login based on the URL.
     print(f'[+] Found Username: ==> {username}')
     print(f'[+] Found Password: ==> {password}')
