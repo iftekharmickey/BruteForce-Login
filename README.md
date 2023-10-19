@@ -117,6 +117,6 @@ Please use this script responsibly and only for legal and ethical purposes. Unau
 
 ## Author
 
-This tool was developed by Iftekhar Tahir.
+This tool was developed by [Iftekhar Tahir](https://github.com/iftekharmickey/).
 
 Enjoy using the Login-Breaker-Pro! For questions, issues, or feedback, feel free to contact me at iftekhar.tahir@proton.me.
